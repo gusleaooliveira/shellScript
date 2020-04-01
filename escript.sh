@@ -19,7 +19,7 @@ read
 clear
 
 echo "Procurando o arquivo e copiando pra pasta aula04:"
-resp=$(sudo find /var -name auth.log)  
+resp=$(sudo find /var -name auth.log | tail -20)  
 cp $resp  /tmp/aula04/auth.log.bkp
 read
 clear
@@ -104,7 +104,7 @@ read
 clear
 
 echo "Criando o bash.lst:"
-history >> /tmp/aula04/backup/bash.lst
+history > /tmp/aula04/backup/bash.lst
 read
 clear
 
